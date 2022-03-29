@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My page</h1>
+
+    <p>
+        이름 :  <%= name %>
+    </p>
+    <p>
+        Email :  <%= email %>
+    </p>
+    <p>
+        가입날짜 :  <%= signupDate %>
+    </p>
+    
+    <div id ="userInfoFix">
+        <form action="/userInfoFix" method="GET">
+            <input type="submit" id="_signButton" value="개인정보 수정">
+        </form>
+    </div>
+    <div id ="article">
+        <form action="/article" method="GET">
+            <input type="submit" id="_signButton" value="게시글 작성">
+        </form>
+    </div>
+    <div id ="articleAll">
+        <form action="/articleAll" method="GET">
+            <input type="submit" id="_signButton" value="see all article">
+        </form>
+    </div>
+    <div id="logout">
+        <form action="/logout" method="POST">
+            <input type="submit" id = "logoutButton" value="로그아웃">
+        </form>
+    </div>
+</body>
+</html>

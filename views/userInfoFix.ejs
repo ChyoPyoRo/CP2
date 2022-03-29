@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+<body>
+    <div id="header">Mypage 수정</div>
+    <div id="content">
+        <form action="/userFix/<%= ID %>?_method=PUT" method="post">
+            
+            <div id="uname">
+                <label>이름  : </label>
+                <input type="text" name="name" value= "<%= name %>">
+            </div>
+            <div id="uid">
+                <label>Email : </label>
+                <input type="text" name="email" value= "<%= email %>">      
+            </div>
+            <div id="upw">
+                <label>PW : </label>
+                <input type="password" name="password" value= "<%= password %>">
+            </div>
+            
+            <div id="submit">
+                <input type="submit" value="submit">
+            </div>
+            
+        </form>
+    </div>
+
+    <div id="logout">
+        <form action="/logout" method="POST">
+            <input type="submit" id = "logoutButton" value="로그아웃">
+        </form>
+    </div>
+</body>
+</html>

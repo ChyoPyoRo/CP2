@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>발자취 등록 페이지</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+<body>
+    <div id="header"><h1>게시글 작성</h1></div>
+    <div id="content">
+        <form action="/article" method="POST">
+            <div>
+                <label>제목 : </label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div >
+                <label>내용 : </label>
+                <input type="text" name="content" id="content" >
+            </div>
+            <div>
+                <input type="submit" id="submit" value="등록하기">
+            </div>
+        </form>
+        <div id = "backMypage">
+            <form action="/mypage" method="GET">
+                <input type="submit" id="_signButton" value="돌아가기">
+            </form>
+        </div>
+        <div id="logout">
+            <form action="/logout" method="POST">
+                <input type="submit" id = "logoutButton" value="로그아웃">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

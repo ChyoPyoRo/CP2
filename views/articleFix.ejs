@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+<body>
+    <div id="header"><h1>게시글 작성</h1></div>
+    <div id="content">
+        <form action="/articleFix/<%= id%>?_method=PUT" method="POST">
+            <input type="hidden" id="id" value="<%= id%>">
+            <div>
+                <label>제목 : </label>
+                <input type="text" name="title" id="title" value= "<%= title %>">
+            </div>
+            <div >
+                <label>내용 : </label>
+                <input type="text" name="content" id="content" value= "<%= content %>">
+            </div>
+            <div>
+                <input type="submit" id="submit" value="등록하기">
+            </div>
+        </form>
+        <div id = "backMypage">
+            <form action="/mypage" method="GET">
+                <input type="submit" id="_signButton" value="mypage 돌아가기">
+            </form>
+        </div>
+        <div id="logout">
+            <form action="/logout" method="POST">
+                <input type="submit" id = "logoutButton" value="로그아웃">
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
