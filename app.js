@@ -67,6 +67,8 @@ app.use(express.static(path.join(__dirname, 'public')));
     })
 );
 
+console.log('dkdkdkdk')
+
 
 app.use(passport.authenticate('session'));
 app.use(passport.initialize())
